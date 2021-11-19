@@ -1,0 +1,23 @@
+{
+	"name": "draw",
+	"version": "0.0.0",
+	"author": "Joeri Bakker <bakkerjoeri@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"dev": "rm -rf dist && rollup --config rollup.config.js --watch",
+		"build": "rm -rf dist && rollup --config rollup.config.js",
+		"version": "npm run build && git add -A dist",
+		"postversion": "git push && git push --tags"
+	},
+	"dependencies": {
+		"dotspace": "^1.0.0",
+		"roll-the-bones": "^1.1.0"
+	},
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^11.0.1",
+		"@rollup/plugin-typescript": "^8.1.0",
+		"rollup": "^2.35.1",
+		"tslib": "^2.0.3",
+		"typescript": "^4.1.3"
+	}
+}
